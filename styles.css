@@ -3,24 +3,31 @@ body {
     padding: 0;
 }
 
+.BG {
+    position: relative;
+    background-color: pink;
+    width: 700px;
+    height: 700px;
+    margin: 50px auto;
+    border-radius: 50px;
+}
+
 .container {
+    position: absolute;
+    z-index: 10;
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+/*    grid-template-columns: repeat( 20, 1fr );*/
     width: 500px;
-    margin: 0 auto;
     border: solid 1px lightgray;
+    left: 20px;
+    top: 20px;
+    
 }
 
 .child {
     width: 100px;
     height: 100px;
-
-    background-color: lightblue;
-    border: 1px solid black;
-
-}
-
-.dark {
-    background-color: darkgrey;
+    background-color: white;
+    border: 1px solid lightblue;
 }
 
