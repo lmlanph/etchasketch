@@ -1,13 +1,11 @@
 
-
-
-
-let grid = 50;
+let grid = 12;
 
 let gridMult = grid * grid;
 
 let contDiv = document.querySelector('.container');
 
+// add pixels, style, event listeners
 for (let i = 0; i < gridMult; i++) {
     // console.log('hi')
     let d = document.createElement("div");
@@ -19,7 +17,6 @@ for (let i = 0; i < gridMult; i++) {
     d.style.height = `${500/grid}px`
 
     contDiv.appendChild(d);
-
 }
 
 const layoutGrid = () => {
