@@ -2,9 +2,8 @@
 
 
 
-let grid = 10;
+let grid = 4;
 let gridSize = grid * grid;
-
 
 let contDiv = document.querySelector('.container');
 

@@ -5,13 +5,18 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat( auto-fit, minmax(100px, 1fr) );
+    width: 500px;
+    margin: 0 auto;
+    border: solid 1px lightgray;
 }
 
 .child {
     width: 100px;
     height: 100px;
+
     background-color: lightblue;
     border: 1px solid black;
+
 }
 
