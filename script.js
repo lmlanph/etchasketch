@@ -25,3 +25,10 @@ const layoutGrid = () => {
 }
 
 layoutGrid();
+
+const myClick = () => {console.log(document.getElementsByName('g-size')[0].value)};
+
+document.getElementById("btn").addEventListener("click", myClick());
+
+
+

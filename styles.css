@@ -14,7 +14,6 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
     background-color: pink;
     width: 700px;
     height: 700px;
@@ -28,26 +27,25 @@ p {
     justify-content: center;
     align-items: center;
     margin-right: 100px;
-    margin-left: 100px;
-    /*margin-top: 50px;*/
+    /*margin-left: 100px;*/
+}
+
+.nav-child:first-child{
+    color: #8aac5f;
+    margin-right: auto;
 }
 
 .container {
     position: absolute;
     z-index: 10;
     display: grid;
-/*    grid-template-columns: repeat( 20, 1fr );*/
     width: 500px;
-    /*border: solid 1px lightgray;*/
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
 .child {
-/*    width: 100px;
-    height: 100px;*/
     background-color: white;
-    /*border: 1px solid lightblue;*/
 }
 
