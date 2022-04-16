@@ -7,7 +7,7 @@ body {
 p {
     font-family: 'Playfair Display', serif;
     font-size: 2em;
-    color: #4d4d4d;
+    color: #798f5a;
 }
 
 #btn {
@@ -22,6 +22,7 @@ p {
 #inpt {
     border: none;
     outline: none;
+    margin-right: 10px;
 }
 
 .BG {
