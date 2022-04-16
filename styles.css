@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #f5fff5;
 }
 
 p {
@@ -9,12 +10,24 @@ p {
     color: #4d4d4d;
 }
 
+#btn {
+    border: none;
+    outline: none;
+    padding: 5px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: #d9f9d9;
+}
+
+#inpt {
+    border: none;
+    outline: none;
+}
+
 .BG {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-
     background-color: pink;
     width: 700px;
     height: 700px;
@@ -24,30 +37,24 @@ p {
 
 .nav {
     display: flex;
-    column-gap: 12px;
-    justify-content: center;
+    /*column-gap: 12px;*/
+    justify-content: space-between;
     align-items: center;
     margin-right: 100px;
     margin-left: 100px;
-    /*margin-top: 50px;*/
 }
 
 .container {
     position: absolute;
     z-index: 10;
     display: grid;
-/*    grid-template-columns: repeat( 20, 1fr );*/
     width: 500px;
-    /*border: solid 1px lightgray;*/
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
 .child {
-/*    width: 100px;
-    height: 100px;*/
     background-color: white;
-    /*border: 1px solid lightblue;*/
 }
 

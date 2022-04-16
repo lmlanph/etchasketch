@@ -1,27 +1,65 @@
-
+// default grid
 let grid = 12;
 
-let gridMult = grid * grid;
 
-let contDiv = document.querySelector('.container');
+const layoutGrid = (dim) => {
 
-// add pixels, style, event listeners
-for (let i = 0; i < gridMult; i++) {
-    // console.log('hi')
-    let d = document.createElement("div");
-    d.classList.add('child');
+    if (dim > 100) {
+        dim = 100
+    } else if (dim < 2) {
+        dim = 2
+    }
 
-    d.addEventListener('mouseover', (event) => event.target.style.backgroundColor = 'orange')
+    let contDiv = document.querySelector('.container');
 
-    d.style.width = `${500/grid}px`
-    d.style.height = `${500/grid}px`
+    // remove all children, if present
+    while (contDiv.firstChild) {
+        contDiv.removeChild(contDiv.lastChild);
+      }
 
-    contDiv.appendChild(d);
-}
+    let gridMult = dim * dim;
 
-const layoutGrid = () => {
+    // add pixels, style, event listeners
+    for (let i = 0; i < gridMult; i++) {
+        // console.log('hi')
+        let d = document.createElement("div");
+        d.classList.add('child');
+
+        d.addEventListener('mouseover', (event) => event.target.style.backgroundColor = 'orange')
+
+        d.style.width = `${500/dim}px`
+        d.style.height = `${500/dim}px`
+
+        contDiv.appendChild(d);
+    }
+
     const container = document.getElementById('container')
-    container.style.gridTemplateColumns = `repeat(${grid}, 1fr)`
+    container.style.gridTemplateColumns = `repeat(${dim}, 1fr)`
+
+    let val = document.getElementsByName('g-size')[0].value;
+    val = "";
 }
 
-layoutGrid();
+
+layoutGrid(grid);
+
+
+const myClick = () => {
+    let val = document.getElementsByName('g-size')[0].value;
+    // console.log(val);
+    grid = val;
+
+    layoutGrid(grid);
+    
+};
+
+document.getElementById("inpt").addEventListener('keypress', (e) => {
+    if (e.key === "Enter") {
+    event.preventDefault();
+    }
+})
+
+document.getElementById("btn").addEventListener("click", myClick);
+
+
+
